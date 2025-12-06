@@ -1,0 +1,111 @@
+/* index.css */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;700&display=swap');
+
+:root{
+  --bg: #0b0e13;
+  --card-bg: linear-gradient(135deg,#0f1724 0%, #1b2330 100%);
+  --accent: #ffcc00;
+  --muted: #9aa4b2;
+}
+
+*{ box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Rubik', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(255,255,255,0.02), transparent),
+              radial-gradient(800px 400px at 90% 90%, rgba(255,255,255,0.01), transparent),
+              var(--bg);
+  color: #eef2f6;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  min-height: 100vh;
+}
+
+/* header */
+.app-header{
+  padding: 1.25rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+
+/* heading style */
+.title {
+  font-size: clamp(1.6rem, 3.6vw, 2.6rem);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+
+/* card custom */
+.poke-card {
+  border: none;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform .18s ease, box-shadow .18s ease;
+  min-height: 160px;
+}
+.poke-card:hover{
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 20px 40px rgba(2,6,23,0.6);
+}
+
+.poke-image {
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  display:block;
+  margin: 0 auto;
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,0.6));
+}
+
+/* badges type */
+.poke-type {
+  font-size: 0.78rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  color: #0b0e13;
+  font-weight: 600;
+}
+
+/* search input */
+.search-input {
+  max-width: 520px;
+  border-radius: 999px;
+  box-shadow: inset 0 -1px 0 rgba(255,255,255,0.02);
+}
+
+/* modal override */
+.modal-content {
+  background: linear-gradient(180deg, rgba(10,12,20,0.9), rgba(8,9,14,0.95));
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+}
+.card-pokemon {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.card-pokemon:hover {
+  transform: scale(1.05);
+}
+
+.fade-info {
+  background: #222;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+  color: white;
+  font-size: 14px;
+  animation: fadeZoom 0.3s ease forwards;
+}
+
+@keyframes fadeZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
