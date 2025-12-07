@@ -1,6 +1,8 @@
 // src/components/PokemonList.tsx
 import React, { useEffect, useMemo, useState } from "react";
-import { getPokemons, getPokemonDetails, PokemonFull } from "../services/pokemonService";
+import { getPokemons, getPokemonDetails } from "../services/pokemonService";
+import type { PokemonFull } from "../services/pokemonService";
+
 import { PokemonCard } from "./PokemonCard";
 import { Modal, Button, Spinner } from "react-bootstrap";
 

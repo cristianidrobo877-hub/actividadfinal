@@ -1,6 +1,5 @@
-// src/components/PokemonCard.tsx
 import React from "react";
-import { PokemonFull } from "../services/pokemonService";
+import type { PokemonFull } from "../services/pokemonService";
 import { typeColor } from "../utils/typeColors";
 
 interface Props {
